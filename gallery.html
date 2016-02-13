@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CollagePlus for jQuery Example</title>
+
+
+    <link rel="stylesheet" type="text/css" href="./css/examples.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="./css/transitions.css" media="all" />
+
+    <!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 9) | (!IE)]><!-->
+    <script src="./extras/jquery.min.js"></script>
+    <!--<![endif]-->
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="./jquery.collagePlus.js"></script>
+    <script src="./extras/jquery.removeWhitespace.js"></script>
+    <script src="./extras/jquery.collageCaption.js"></script>
+  
+    <script type="text/javascript">
+
+    // All images need to be loaded for this plugin to work so
+    // we end up waiting for the whole window to load in this example
+    $(window).load(function () {
+        $(document).ready(function(){
+            collage();
+            $('.Collage').collageCaption();
+        });
+    });
+
+
+    // Here we apply the actual CollagePlus plugin
+    function collage() {
+        $('.Collage').removeWhitespace().collagePlus(
+            {
+                'fadeSpeed'     : 2000,
+                'targetHeight'  : 200,
+                'effect'        : 'effect-1',
+                'direction'     : 'vertical'
+            }
+        );
+    };
+
+    // This is just for the case that the browser window is resized
+    var resizeTimer = null;
+    $(window).bind('resize', function() {
+        // hide all the images until we resize them
+        $('.Collage .Image_Wrapper').css("opacity", 0);
+        // set a timer to re-apply the plugin
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(collage, 2000);
+    });
+
+    </script>
+</head>
+<body>
+    <div class="Collage">
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/1.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/2.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/3.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/4.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/5.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/6.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/7.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/8.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/9.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/10.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/11.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/12.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/13.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/14.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/15.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/16.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/17.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/18.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/19.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/20.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/21.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/22.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/23.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/24.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/25.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/26.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/27.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/28.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/29.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/30.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/31.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/32.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/33.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/34.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/35.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/36.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/37.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/38.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/39.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/40.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/41.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/42.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/43.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/44.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/45.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/46.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/47.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/48.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/49.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/50.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/51.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/52.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/53.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/54.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/55.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/56.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/57.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/58.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/59.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/60.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/61.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/62.gif" />
+        <img src="http://jiecaogc.oss-cn-hangzhou.aliyuncs.com/pobaby/66.gif" />
+    </div>
+
+</body>
+</html>
